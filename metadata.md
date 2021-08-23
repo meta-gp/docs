@@ -11,7 +11,7 @@ maintainer: esteinig
 
 Purpose of this post is to provide user documentation of metadata linked to sequence data uploaded to META-GP.
 
-## Reporting stadards for uploading users of META-GP
+## Reporting standards for users of META-GP
 
 ### BioSamples
 
