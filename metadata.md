@@ -1,13 +1,13 @@
 ---
 layout: docpost
-title: Metadata linked to sequence data in META-GP
-date_published: 2021-08-24 08:00:00 +0000
-date_modified:  2021-08-24 08:00:00 +0000
+title: Metadata linked to sequence data
+date_published: 2021-08-24 
+date_modified:  2021-08-24
 author: esteinig
 maintainer: esteinig
 ---
 
-# MetaData linked to sequence data in META-GP
+# MetaData linked to sequence data
 
 Purpose of this post is to provide user documentation of metadata linked to sequence data uploaded to META-GP.
 
