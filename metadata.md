@@ -6,3 +6,9 @@ date_modified:  2021-08-24 08:00:00 +0000
 author: esteinig
 maintainer: esteinig
 ---
+
+# MetaData linked to sequence data in META-GP
+
+Purpose of this post is to provide user documentation of metadata linked to sequence data uploaded to META-GP.
+
+
