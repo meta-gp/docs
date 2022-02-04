@@ -1,5 +1,8 @@
 # Documentation
 
-[![Documentation Status](https://readthedocs.org/projects/meta-gp/badge/?version=latest)](https://meta-gp.readthedocs.io/en/latest/?badge=latest)
+`META-GP` platform documentation:
 
-Platform documentation and protocol templates
+1. Source code conventions and contribution guidelines
+2. API access documentation for production
+3. Standard operation protocols (SOP) for production
+
