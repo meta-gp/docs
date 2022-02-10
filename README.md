@@ -8,7 +8,7 @@
 
 ## Project environments
 
-### Python project 
+### Python 
 
 Setup with a base `conda` environment with `mamba` installed - this allows for external dependencies.
 
@@ -18,7 +18,7 @@ poetry install
 pre-commit install
 ```
 
-### Rust project
+### Rust
 
 ...
 
