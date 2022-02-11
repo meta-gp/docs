@@ -10,7 +10,9 @@
 
 ### Python 
 
-Setup with a base `conda` environment with `mamba` installed - this allows for external dependencies.
+Dependencies:
+
+* `conda` with `mamba` installed
 
 ```
 mamba create -n <project-env> -c conda-forge poetry python=3.10
@@ -20,7 +22,9 @@ pre-commit install
 
 ### Rust
 
-...
+Dependencies:
+
+* `rustc` / `cargo`
 
 ## Project code contribution
 
