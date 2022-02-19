@@ -51,6 +51,19 @@ Some projects may have private repository dependencies, for example `mgp-sim` ha
 ### Code base
 
 1. Do not push to `main` branch directly, always work with pull requests on development branches (usually `dev`)
-2. Issues are used to track changes to source code, use the issue for reference in commits
+
+```
+git checkout dev
+```
+
+2. Issues are used to track changes to source code, use the issue for reference in commits, e.g.
+
+```
+git commit -m "add new feature [#7]"
+git push origin dev
+```
+
 3. Pull requests should refer to the issues and outline the changes to be integrated with main
-4. Test-driven development if possible - `pytest` for Python projects, `cargo` standard tests for Rust
+5. Test-driven development if possible - `pytest` for Python projects, `cargo` standard tests for Rust
+
+
