@@ -16,13 +16,13 @@
 
 ### Git
 
-You need to habe `ssh` keys setup for your account to pull and contribute code to the private repositories. Cloning repositories should therefore look like:
+`SSH` keys setup for accounts to pull and contribute code to the private repositories. Cloning repositories should look like:
 
 ```
 git clone git@github.com/meta-gp/<repo>
 ```
 
-Some projects may have private repository dependencies, for example `mgp-sim` has `mgp-db` as a dependency; this requires `ssh` setup as above for installing dependencies, e.g. with `poetry`.
+Some projects may have private repository dependencies, for example `mgp-sim` has `mgp-db` as a dependency; this requires `SSH` setup as above for installing dependencies, for example with `poetry` (see below).
 
 
 ### Contribution
