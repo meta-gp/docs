@@ -65,22 +65,28 @@ Continuous integration with testing on `Mac` and `Linux` operating systems is en
 
 Dependencies:
 
-* `conda` with `mamba` installed into `base` environment [instructions for `Linux`]
+`Miniconda` with default channel configuration and `mamba` installed into `base` environment [instructions for `Linux`]
 
 ```bash
 curl -sL "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh" > conda.sh
 bash conda.sh  # follow instructions and setup for user shell
 rm conda.sh && source ~/.bashrc  # if init is added to bash shell
-conda install mamba -n base -c conda-forge 
+
+# important, in this order
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+# mamba installer
+conda install -n base mamba 
 ```
 
-* project environments with pre-commit settings [setup in project repositories]
+Project environments with `poetry` package manager and pre-commit settings [setup in project repositories]
 
 ```bash
-mamba create -n <project-env> -c conda-forge poetry python=3.10
+mamba create -n <project-env> poetry python=3.10
 conda activate <project-env>
-poetry install # inside cloned project repository
-pre-commit install
+poetry install  # inside cloned project repository
+pre-commit install  # inside cloned project repository
 ```
 
 When adding internal (private) repositories to `poetry` use `ssh` pattern with the `main` branch, otherwise fails to detect `master`:
