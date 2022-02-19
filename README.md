@@ -40,20 +40,39 @@ or open a new feature branch
 git checkout -b <feature>
 ```
 
-and push to respective branch
+2. Issues are used to track development
+
+![issues](https://user-images.githubusercontent.com/12873366/154821287-0aaa4faf-931c-4136-b845-0e2e16f6c7ba.png)
+
+Task check boxes can be helpful sometimes
+
+![tasks](https://user-images.githubusercontent.com/12873366/154821326-7930479d-8ec9-4b05-b7fd-868d91666b17.png)
+
+
+3. Use the issue for reference in commits, e.g.
+
+```
+git add .
+git commit -m "add new feature [#7]"
+```
+
+![refissue](https://user-images.githubusercontent.com/12873366/154821338-f34b0e85-94e8-4db4-a848-2a72edd25965.png)
+
+
+4. Push to respective branch features are developed on, e.g.
 
 ```
 git push origin dev
 ```
 
-2. Issues are used to track changes to source code, use the issue for reference in commits, e.g.
+5. Pull requests should refer to the issues and outline the changes to be integrated with `main`, you can tag developers for code review and delete the branch, if you are using a feature specific branch.
 
-```
-git commit -m "add new feature [#7]"
-```
+> ⚠️ Generally do not delete the `dev` branch as done for test purposes in this image
 
-3. Pull requests should refer to the issues and outline the changes to be integrated with main, you can tag developers for code review 
-5. Test-driven development if possible - `pytest` for Python projects, `cargo` standard tests for Rust. Understandably there is currently a need for balance between outputs and test-driven development (which takes time), but we should strive to follow best practices, even if that means going back to write test suites for already developed code bases
+![pull](https://user-images.githubusercontent.com/12873366/154821391-df314c92-cca5-475a-a086-a9ea45f89d21.png)
+
+
+6. Test-driven development if possible - `pytest` for Python projects, `cargo` standard tests for Rust. Understandably there is currently a need for balance between outputs and test-driven development (which takes time), but we should strive to follow best practices, even if that means going back to write test suites for already developed code bases
 
 ### Continuous integration
 
@@ -86,6 +105,7 @@ Project environments with `poetry` package manager and pre-commit settings [setu
 mamba create -n <project-env> poetry python=3.10
 conda activate <project-env>
 poetry install  # inside cloned project repository
+
 pre-commit install  # inside cloned project repository
 ```
 
