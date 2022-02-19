@@ -6,7 +6,7 @@ Developed for `Linux` operating systems, packages are also tested on `MacOS`.
 
 - [Source code conventions and contribution guidelines](#source-code)
   - [Git usage](#git)
-  - [Code contribution](#contribution)
+  - [Code contributions](#code-contributions)
   - [Tests and CI](#tests-and-ci)
   - [Python repositories](#python-repositories)
   - [Rust repositories](#rust-repositories)
@@ -15,7 +15,7 @@ Developed for `Linux` operating systems, packages are also tested on `MacOS`.
 
 ## Source Code
 
-### Git
+### Git usage
 
 `SSH` keys setup for accounts to pull and contribute code to the private repositories. Cloning repositories should look like:
 
@@ -26,7 +26,7 @@ git clone git@github.com/meta-gp/<repo>
 Some projects may have private repository dependencies, for example `mgp-sim` has `mgp-db` as a dependency; this requires `SSH` setup as above for installing dependencies, for example with `poetry` (see below).
 
 
-### Contribution
+### Code contributions
 
 1. Do not push to `main` branch directly, always work with pull requests on development branches (usually `dev`)
 
