@@ -39,6 +39,8 @@ You need to habe `SSH` keys setup for your account to pull and contribute code t
 git clone git@github.com/meta-gp/<repo>
 ```
 
+Some projects may have private repository dependencies, for example `mgp-sim` has `mgp-db` as a dependency; this requires `ssh-agent` setup as above for installing dependencies, e.g. with `poetry`.
+
 ### Code base
 
 1. Do not push to `main` branch directly, always work with pull requests on development branches (usually `dev`)
