@@ -13,6 +13,7 @@
 Dependencies:
 
 * `conda` with `mamba` installed
+* pre-commit `black` formatting 
 
 ```
 mamba create -n <project-env> -c conda-forge poetry python=3.10
@@ -26,13 +27,21 @@ Dependencies:
 
 * `rustc` / `cargo`
 
-## Project code contribution
+## Contribution
 
-Continuous integration with tests is enabled for most repositories (Python/Rust).
+Continuous integration with tests is enabled for most repositories (Python/Rust) o nthe `test` branch, and will be enabled on the `main` branch once 
 
-General rules:
+### Git
 
-1. Do not push to `main` branch directly, always work with pull requests on development branches
+You need to habe `SSH` keys setup for your account to pull and contribute code to the private repositories. Cloning repositories should therefore look like:
+
+```
+git clone git@github.com/meta-gp/<repo>
+```
+
+### Code base
+
+1. Do not push to `main` branch directly, always work with pull requests on development branches (usually `dev`)
 2. Issues are used to track changes to source code, use the issue for reference in commits
 3. Pull requests should refer to the issues and outline the changes to be integrated with main
 4. Test-driven development if possible - `pytest` for Python projects, `cargo` standard tests for Rust
