@@ -1,6 +1,8 @@
 # Documentation
 
-`META-GP` platform documentation:
+`META-GP` platform documentation `v0.1.0`
+
+
 
 - [Source code conventions and contribution guidelines](#source-code)
   - [Git usage](#git)
