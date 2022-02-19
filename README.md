@@ -17,6 +17,7 @@ Dependencies:
 
 ```
 mamba create -n <project-env> -c conda-forge poetry python=3.10
+conda activate <project-env>
 poetry install 
 pre-commit install
 ```
