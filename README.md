@@ -2,7 +2,7 @@
 
 `META-GP` platform documentation `v0.1.0`
 
-
+Developed for `Linux` operating systems, packages are also tested on `MacOS`.
 
 - [Source code conventions and contribution guidelines](#source-code)
   - [Git usage](#git)
@@ -59,13 +59,21 @@ git commit -m "add new feature [#7]"
 
 Dependencies:
 
-* `conda` with `mamba` installed
-* pre-commit `black` formatting 
+* `conda` with `mamba` installed into `base` environment [instructions for `Linux`]
 
+```bash
+curl -sL "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh" > conda.sh
+bash conda.sh  # follow instructions and setup for user shell
+rm conda.sh && source ~/.bashrc  # if init is added to bash shell
+conda install mamba -n base -c conda-forge 
 ```
+
+* project environments with pre-commit settings [setup in project repositories]
+
+```bash
 mamba create -n <project-env> -c conda-forge poetry python=3.10
 conda activate <project-env>
-poetry install 
+poetry install # inside cloned project repository
 pre-commit install
 ```
 
