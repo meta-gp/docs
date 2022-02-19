@@ -52,7 +52,7 @@ git commit -m "add new feature [#7]"
 ```
 
 3. Pull requests should refer to the issues and outline the changes to be integrated with main, you can tag developers for code review 
-5. Test-driven development if possible - `pytest` for Python projects, `cargo` standard tests for Rust. Understandably there is currently a need for balance between outputs and test-driven development (which takes time), but we should strive to follow best practices, even if that means going back to write test suites for already devleoped code bases
+5. Test-driven development if possible - `pytest` for Python projects, `cargo` standard tests for Rust. Understandably there is currently a need for balance between outputs and test-driven development (which takes time), but we should strive to follow best practices, even if that means going back to write test suites for already developed code bases
 
 
 ### Python repositories
