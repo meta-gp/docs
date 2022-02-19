@@ -7,6 +7,7 @@ Developed for `Linux` operating systems, packages are also tested on `MacOS`.
 - [Source code conventions and contribution guidelines](#source-code)
   - [Git usage](#git)
   - [Code contribution](#contribution)
+  - [Continuous integration](#continuous-integration)
   - [Python repositories](#python-repositories)
   - [Rust repositories](#rust-repositories)
 - API access documentation for production
@@ -54,6 +55,11 @@ git commit -m "add new feature [#7]"
 3. Pull requests should refer to the issues and outline the changes to be integrated with main, you can tag developers for code review 
 5. Test-driven development if possible - `pytest` for Python projects, `cargo` standard tests for Rust. Understandably there is currently a need for balance between outputs and test-driven development (which takes time), but we should strive to follow best practices, even if that means going back to write test suites for already developed code bases
 
+### Continuous integration
+
+
+Continuous integration with testing on `Mac` and `Linux` operating systems is enabled for most repositories (Python/Rust). It is currently on pushes or pull requests to the `test` branch, and will be enabled on the `main` branch once repositories are used or published for research and production.
+
 
 ### Python repositories
 
@@ -88,6 +94,4 @@ poetry add git+ssh://git@github.com/meta-gp/<repo>.git#main
 Dependencies:
 
 * `rustc` / `cargo`
-
-Continuous integration with tests is enabled for most repositories (Python/Rust) o nthe `test` branch, and will be enabled on the `main` branch once repositories are used or published for research and production.
 
