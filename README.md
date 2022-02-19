@@ -21,6 +21,12 @@ poetry install
 pre-commit install
 ```
 
+When adding internal (private) repositories to `poetry` use `ssh` pattern with the `main` branch, otherwise fails to detect `master`:
+
+```
+poetry add git+ssh://git@github.com/meta-gp/<repo>.git#main
+```
+
 ### Rust
 
 Dependencies:
@@ -33,13 +39,13 @@ Continuous integration with tests is enabled for most repositories (Python/Rust)
 
 ### Git
 
-You need to habe `SSH` keys setup for your account to pull and contribute code to the private repositories. Cloning repositories should therefore look like:
+You need to habe `ssh` keys setup for your account to pull and contribute code to the private repositories. Cloning repositories should therefore look like:
 
 ```
 git clone git@github.com/meta-gp/<repo>
 ```
 
-Some projects may have private repository dependencies, for example `mgp-sim` has `mgp-db` as a dependency; this requires `ssh-agent` setup as above for installing dependencies, e.g. with `poetry`.
+Some projects may have private repository dependencies, for example `mgp-sim` has `mgp-db` as a dependency; this requires `ssh` setup as above for installing dependencies, e.g. with `poetry`.
 
 ### Code base
 
