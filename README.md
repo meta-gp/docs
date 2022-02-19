@@ -2,11 +2,11 @@
 
 `META-GP` platform documentation:
 
-1. Source code conventions and contribution guidelines
+1. [Source code conventions and contribution guidelines](#source-code)
 2. API access documentation for production
 3. Standard operation protocols (SOP) for production
 
-## Project environments
+## Source Code
 
 ### Python 
 
@@ -34,9 +34,7 @@ Dependencies:
 
 * `rustc` / `cargo`
 
-## Contribution
-
-Continuous integration with tests is enabled for most repositories (Python/Rust) o nthe `test` branch, and will be enabled on the `main` branch once 
+Continuous integration with tests is enabled for most repositories (Python/Rust) o nthe `test` branch, and will be enabled on the `main` branch once repositories are used or published for research and production.
 
 ### Git
 
@@ -48,7 +46,7 @@ git clone git@github.com/meta-gp/<repo>
 
 Some projects may have private repository dependencies, for example `mgp-sim` has `mgp-db` as a dependency; this requires `ssh` setup as above for installing dependencies, e.g. with `poetry`.
 
-### Code base
+### Contributions
 
 1. Do not push to `main` branch directly, always work with pull requests on development branches (usually `dev`)
 
