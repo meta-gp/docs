@@ -40,13 +40,12 @@ or open a new feature branch
 git checkout -b <feature>
 ```
 
-Issues are used to track development
+Issues are used to track development; task check boxes can be helpful sometimes and are automatically recognised and tracked in the issue descriptions. In Markdown these can be implemented like this:
 
-![issues](https://user-images.githubusercontent.com/12873366/154821287-0aaa4faf-931c-4136-b845-0e2e16f6c7ba.png)
-
-Task check boxes can be helpful sometimes
-
-![tasks](https://user-images.githubusercontent.com/12873366/154821326-7930479d-8ec9-4b05-b7fd-868d91666b17.png)
+```markdown
+- [x] completed
+- [ ] not completed
+```
 
 
 Use issues for reference in commits.
@@ -72,8 +71,6 @@ git push origin dev
 Pull requests should refer to the issues and outline the changes to be integrated with `main`, you can tag developers for code review and delete the branch, if you are using a feature specific branch.
 
 > ⚠️ Generally do not delete the common `dev` branch, but delete feature specific branches 
-
-![pullreq](https://user-images.githubusercontent.com/12873366/154821929-0782c82f-3230-432c-9a45-e2d1e4e8aa0e.png)
 
 ### Tests and CI
 
