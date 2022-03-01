@@ -13,9 +13,7 @@ Developed for `Linux` operating systems, packages are also tested on `MacOS`.
 - API access documentation for production
 - Standard operation protocols (SOP) for production
 
-## Source Code
-
-### Git usage
+## Git usage
 
 `SSH` keys setup for accounts to pull and contribute code to the private repositories. Cloning repositories should look like:
 
@@ -26,7 +24,7 @@ git clone git@github.com/meta-gp/<repo>
 Some projects may have private repository dependencies, for example `mgp-sim` has `mgp-db` as a dependency; this requires `SSH` setup as above for installing dependencies, for example with `poetry` (see below).
 
 
-### Code contributions
+## Code contributions
 
 Do not push to `main` branch directly, always work with pull requests on development branches (usually `dev`)
 
@@ -72,14 +70,14 @@ Pull requests should refer to the issues and outline the changes to be integrate
 
 > ⚠️ Generally do not delete the common `dev` branch, but delete feature specific branches 
 
-### Tests and CI
+## Tests and CI
 
 Test-driven development should be done if possible - `pytest` for Python projects, `cargo` standard tests for Rust projects. Understandably there is currently a need for balance between outputs and test-driven development (which takes time), but we should strive to follow best practices, even if that means going back to write test suites for already developed code bases
 
 Continuous integration with testing on `Mac` and `Linux` operating systems is enabled for most repositories (Python/Rust). It is currently on pushes or pull requests to the `test` branch, and will be enabled on the `main` branch once repositories are used or published for research and production.
 
 
-### Python repositories
+## Python repositories
 
 Dependencies:
 
@@ -114,7 +112,7 @@ When adding internal (private) repositories to `poetry` use `ssh` pattern with t
 poetry add git+ssh://git@github.com/meta-gp/<repo>.git#main
 ```
 
-### Rust repositories
+## Rust repositories
 
 Dependencies:
 
