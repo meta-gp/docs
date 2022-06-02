@@ -4,7 +4,7 @@
 
 Developed for `Linux` operating systems, packages are also tested on `MacOS`.
 
-- [Setup]
+- [Development Setup](#development-setup)
 - [Conventions and contribution guidelines](#source-code)
   - [Git usage](#git)
   - [Code contributions](#code-contributions)
