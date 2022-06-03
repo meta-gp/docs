@@ -5,7 +5,7 @@
 Developed for `Linux` operating systems, packages are also tested on `MacOS`.
 
 - [Development Setup](#development-setup)
-- [Conventions and contribution guidelines](#source-code)
+  - [Pipeline](#pipeline-setup)
   - [Git usage](#git)
   - [Code contributions](#code-contributions)
   - [Tests and CI](#tests-and-ci)
@@ -21,7 +21,7 @@ The 'platform' consists of two main components:
 
 General Requirements:
 
-1. Linux (`Ubuntu 18.04`) servers for API with a `main` server and a `hive` staging server, both have `/work` mounted data volume (e.g. `NFS` shared drive on the `Nectar` cluster), `Docker` operational and main user added to docker group. For local development setup the system is considered `main` and requires another remote `hive` staging server for file uploads with the current configuration. See more how to setup the backend in [meta-gp/mgp-system](https://github.com/meta-gp/mgp-system).
+1. Linux (`Ubuntu` dist) servers for API with a `main` server and a `hive` staging server, both have `/work` mounted data volume (e.g. `NFS` shared drive on the `Nectar` cluster), `Docker` operational and main user added to docker group. For local development setup the system is considered `main` and requires another remote `hive` staging server for file uploads with the current configuration. See more how to setup the backend in [meta-gp/mgp-system](https://github.com/meta-gp/mgp-system).
 2. Pipeline: 32GB RAM, 8 threads, ~ 500 GB storage for the databases, ~ 2 TB scratch storage for development runs, test files (downloadable in `mgp-tools` client), `conda` environments for each pipeline module - see [meta-gp/modules/configs](https://github.com/meta-gp/modules/blob/main/configs/core.config) in development (set paths in config for pipeline to local installation, profiles can be added to the config file for the default `conda` path in the `-profile home_conda` the envs are at `/data/opt/conda/envs`). `Docker` containers are set for each module otherwise, but have not been tested for pipeline execution yet.
 
 ## Pipeline setup
