@@ -48,34 +48,34 @@ Test files for the current stage:
 
 ```
 
-Then the pipeline stage (`-entry`) can be executed, for example using the default profile with `conda` environments setup, and a scratch directory for the workload:
+Then the pipeline stage (`-entry`) can be executed, for example using the default profile with `conda` environments setup, and a scratch directory for the workload. Note here we are using `minimap2` and short-read indices by default. Inpuit `Fastq` files have typical `R1/R2` tails for PE Illumina data and can be `gz` compressed.
 
 ```bash
-nextflow run meta-gp/modules/workflows/pre_alpha.nf -c meta-gp/modules/configs/core.config \
--profile home_conda -entry pre_alpha -w /scratch/dev  \
---host_aligner strobealign --viral_aligner strobealign --bacterial_aligner strobealign \
---illumina_pe 'fastq/*_{R1,R2}.fastq' \
---host_alignment_index db/chm13v2.0.fa \
---viral_alignment_index db/virosaurus98_sr.mmi \
---viral_fasta db/virosaurus98_sr.fasta \
---bacterial_mash_index db/bacteria_complete.msh \
---bacterial_fasta db/bacteria_complete.fasta \
---bacterial_mash_min_shared_hashes 2 
+nextflow run meta-gp/modules/workflows/pre_alpha.nf \
+-c meta-gp/modules/configs/core.config \
+-profile home_conda \
+-entry pre_alpha \
+-w /scratch/dev  \
+--illumina_pe 'fastq/*_{R1,R2}.fastq.gz'
 ```
 
-Note here we are passing `fasta` files to the alignment index for host and viral alignments, due to `strobealign` not using pre-computed index files like `minimap2` e.g.
+Switch to `StrobeAlign` for all domain alignments requires to switch to `Fasta` files for host and viral alignments due to `StrobeAlign` not using pre-computed index files (in `0.7.1`). Here we explicitly state all domain profiling reference files and aligners:
 
 ```bash
-nextflow run meta-gp/modules/workflows/pre_alpha.nf -c meta-gp/modules/configs/core.config \
--profile home_conda -entry pre_alpha -w /scratch/dev  \
---host_aligner strobealign --viral_aligner strobealign --bacterial_aligner strobealign \
---illumina_pe 'fastq/*_{R1,R2}.fastq' \
---host_alignment_index db/chm13v2_sr.mmi \
+nextflow run meta-gp/modules/workflows/pre_alpha.nf \
+-c meta-gp/modules/configs/core.config \
+-profile home_conda \
+-entry pre_alpha \
+-w /scratch/dev  \
+--host_aligner strobealign \
+--viral_aligner strobealign \
+--bacterial_aligner strobealign \
+--illumina_pe 'fastq/*_{R1,R2}.fastq.gz' \
+--host_alignment_index db/chm13v2_sr.fasta \
 --viral_alignment_index db/virosaurus98_sr.fasta \
 --viral_fasta db/virosaurus98_sr.fasta \
 --bacterial_mash_index db/bacteria_complete.msh \
---bacterial_fasta db/bacteria_complete.fasta \
---bacterial_mash_min_shared_hashes 2 
+--bacterial_fasta db/bacteria_complete.fasta
 ```
 
 Alignment and mash index names must match the associated `fasta` names from which the indices are computed (checked in pipeline).
@@ -140,30 +140,4 @@ Pull requests should refer to the issues and outline the changes to be integrate
 Test-driven development should be done if possible - `pytest` for Python projects, standard tests for Rust projects. Understandably there is currently a need for balance between outputs and test-driven development (which takes time).
 
 Continuous integration with testing on `Mac` and `Linux` operating systems is disabled for most repositories (Python/Rust). Some drafts for the action templates are available in the repositories.
-
-## Python repositories
-
-Project environments with `poetry` package manager and pre-commit settings [setup in project repositories]
-
-```bash
-mamba create -n <project-env> poetry python=3.10
-conda activate <project-env>
-poetry install  # inside cloned project repository
-
-pre-commit install  # inside cloned project repository
-```
-
-When adding internal (private) repositories to `poetry` use `ssh` pattern with the `main` branch, otherwise fails to detect `master`:
-
-```
-poetry add git+ssh://git@github.com/meta-gp/<repo>.git#main
-```
-
-Code annotation is currently in [Google style format](https://google.github.io/styleguide/pyguide.html) e.g. in `mgp_tools` (but generally inconsistent, feel free to open issue on this.
-
-## Rust repositories
-
-Dependencies:
-
-* `rustc` / `cargo`
 
