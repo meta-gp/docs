@@ -9,8 +9,6 @@ Developed for `Linux` operating systems, packages are also tested on `MacOS`.
   - [Git usage](#git)
   - [Code contributions](#code-contributions)
   - [Tests and CI](#tests-and-ci)
-  - [Python repositories](#python-repositories)
-  - [Rust repositories](#rust-repositories)
 - API access documentation for production
 - Standard operation protocols (SOP) for production
 
@@ -31,8 +29,6 @@ General Requirements:
 DBs and host reference genomes for the current development stage have to be downloaded from remote storage and uncompressed, which is conveniently wrapped in `mgp-tools` - binaries are available for direct download:
 
 ```bash
-DEV_STAGE="pre_alpha"
-wget 
 ```
 
 Database and reference files for current stage:
