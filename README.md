@@ -31,21 +31,21 @@ General Requirements:
 Nextflow pipeline stuff
 
 * [`mgp-main`](https://github.com/meta-gp/mgp-main) - main entry point for the production pipeline drawing on `modules` (not implemented yet)
-* [`modules`](https://github.com/meta-gp/modules) - all the nextflow modules and configs by development stage
-* [`mgp-tools`](https://github.com/meta-gp/mgp-tools) - Rust command line client for some performance oriented tasks 
+* [`modules`](https://github.com/meta-gp/modules) - all the nextflow modules and configs by development stage (`main`, need to setup dev branch)
+* [`mgp-tools`](https://github.com/meta-gp/mgp-tools) - Rust command line client for some performance oriented tasks (`main`, need to setup dev branch)
 
 
 API:
 
-* [`mgp-api`]: FastAPI for interaction with the MetaGP network of nodes for data uploads, authentication, database access; also has the containers and `docker-compose files` for the containers to run in dev and production
-* [`mgp-net`]: Rust command line client for nodes and pipelines to interact with the MetaGP API, e.g. to deposit results or pull reports
+* [`mgp-api`]: FastAPI for interaction with the MetaGP network of nodes for data uploads, authentication, database access; also has the containers and `docker-compose files` for the containers to run in dev and production (`main`, need to setup dev branch)
+* [`mgp-net`]: Rust command line client for nodes and pipelines to interact with the MetaGP API, e.g. to deposit results or pull reports (`main`, need to setup dev branch)
 
 
 Tools:
 
 * [`vircov`](https://github.com/meta-gp/vircov) fork of reference genome coverage stats and remapping selection tool (distinct regions of coverage for low abundance viral hits), upstream dev branch is `v0.6.0`. Used as `metacov vircov` command line subtask for viral coverage. Additional selection of single reference genomes for re-mapping has to be improved and tests need to be written.
 * [`mgp-sim`](https://github.com/meta-gp/mgp-sim) - simulation pipeline, dev branch `dev-v0.2.0`. Recently added additional RefSeq simulation panels with the small Illumina MiSeq read type settings. Next steps are tests of the rather convoluted Python code base and additional Nextflow modules for simulating reads on the backend. Ties in with `mgp-val` repository where the read identity tags (e.g. `taxid`) in the header of the reads simulated are parsed and can be evaluated e.g. to determine levels of host read depletion or microbial loss when testing the depletion module of the main pipeline. This repo currently contains the `MGP-DB` SQLite database and interface for sampling, which should probably be made independent to construct the reference databases and indices for the pre-alpha pipeline (and k-mer profiling tools particularly) - also to annotate the reference sequences for downstream use (e.g. grouping in `Vircov` by `taxid='<taxid>'` reference descriptions.
-* [`mgp-val`](https://github.com/meta-gp/mgp-val) - sensitivity / specificity etc. assessment from wetlab or other reference data (in specific `JSON` format) against outputs from the pipeline, currently a draft that strongly ties in with the Steve Miller et al. (2019) CSF SURPI+ validation paper and the viral clinical and sequencing results (which have been parsed
+* [`mgp-val`](https://github.com/meta-gp/mgp-val) - dev branch `dev-v0.1.0`, sensitivity / specificity etc. assessment from wetlab or other reference data (in specific `JSON` format) against outputs from the pipeline, currently a draft that strongly ties in with the Steve Miller et al. (2019) CSF SURPI+ validation paper and the viral clinical and sequencing results (which have been parsed
 
 
 ## Pipeline setup
