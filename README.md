@@ -19,6 +19,8 @@ The 'platform' consists of two main components:
 1. The Nextflow pipeline and associated tools for executing and parsing results from the pipeline output.
 2. The API, database and Docker server infrastructure and associated command-line client to interact with API
 
+Everything besides the API / server infrstructure and internal command line client will eventually be open-source repositories (i.e. a fork of the pipeline that doesn't tie into our server infrastructure and tools).
+
 General Requirements:
 
 1. Linux (`Ubuntu` dist) servers for API with a `main` server and a `hive` staging server, both have `/work` mounted data volume (e.g. `NFS` shared drive on the `Nectar` cluster), `Docker` operational and main user added to docker group. For local development setup the system is considered `main` and requires another remote `hive` staging server for file uploads with the current configuration. See more how to setup the backend in [meta-gp/mgp-system](https://github.com/meta-gp/mgp-system).
@@ -28,8 +30,9 @@ General Requirements:
 
 Nextflow pipeline stuff
 
-* `modules` - all the nextflow modules and configs by development stage
-* [`mgp-tools`]() - Rust command line client for some performance oriented tasks 
+* [`mgp-main`](https://github.com/meta-gp/mgp-main) - main entry point for the production pipeline drawing on `modules` (not implemented yet)
+* [`modules`](https://github.com/meta-gp/modules) - all the nextflow modules and configs by development stage
+* [`mgp-tools`](https://github.com/meta-gp/mgp-tools) - Rust command line client for some performance oriented tasks 
 
 
 API:
@@ -47,9 +50,12 @@ Tools:
 
 ## Pipeline setup
 
+Currently running on local `conda` envs for tools. Needs fixed environment files for direct execution from repository.
+
 DBs and host reference genomes for the current development stage have to be downloaded from remote storage and uncompressed, which is conveniently wrapped in `mgp-tools` - binaries are available for direct download:
 
 ```bash
+TO BE DONE 
 ```
 
 Database and reference files for current stage:
