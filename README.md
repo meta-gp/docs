@@ -22,7 +22,28 @@ The 'platform' consists of two main components:
 General Requirements:
 
 1. Linux (`Ubuntu` dist) servers for API with a `main` server and a `hive` staging server, both have `/work` mounted data volume (e.g. `NFS` shared drive on the `Nectar` cluster), `Docker` operational and main user added to docker group. For local development setup the system is considered `main` and requires another remote `hive` staging server for file uploads with the current configuration. See more how to setup the backend in [meta-gp/mgp-system](https://github.com/meta-gp/mgp-system).
-2. Pipeline: 32GB RAM, 8 threads, ~ 500 GB storage for the databases, ~ 2 TB scratch storage for development runs, test files (downloadable in `mgp-tools` client), `conda` environments for each pipeline module - see [meta-gp/modules/configs](https://github.com/meta-gp/modules/blob/main/configs/core.config) in development (set paths in config for pipeline to local installation, profiles can be added to the config file for the default `conda` path in the `-profile home_conda` the envs are at `/data/opt/conda/envs`). `Docker` containers are set for each module otherwise, but have not been tested for pipeline execution yet.
+2. Pipeline: 32GB -48GB RAM (with current RefSeq eukaryot ausbset alignment workflow), 8 threads, ~ 500 GB storage for the databases, ~ 2 TB scratch storage for development runs, test files (downloadable in `mgp-tools` client), `conda` environments for each pipeline module - see [meta-gp/modules/configs](https://github.com/meta-gp/modules/blob/main/configs/core.config) in development (set paths in config for pipeline to local installation, profiles can be added to the config file for the default `conda` path in the `-profile home_conda` the envs are at `/data/opt/conda/envs`). `Docker` containers are set for each module otherwise, but have not been tested for pipeline execution yet.
+
+## Current development branches
+
+Nextflow pipeline stuff
+
+* `modules` - all the nextflow modules and configs by development stage
+* [`mgp-tools`]() - Rust command line client for some performance oriented tasks 
+
+
+API:
+
+* [`mgp-api`]: FastAPI for interaction with the MetaGP network of nodes for data uploads, authentication, database access; also has the containers and `docker-compose files` for the containers to run in dev and production
+* [`mgp-net`]: Rust command line client for nodes and pipelines to interact with the MetaGP API, e.g. to deposit results or pull reports
+
+
+Tools:
+
+* [`vircov`](https://github.com/meta-gp/vircov) fork of reference genome coverage stats and remapping selection tool (distinct regions of coverage for low abundance viral hits), upstream dev branch is `v0.6.0`. Used as `metacov vircov` command line subtask for viral coverage. Additional selection of single reference genomes for re-mapping has to be improved and tests need to be written.
+* [`mgp-sim`](https://github.com/meta-gp/mgp-sim) - simulation pipeline, dev branch `dev-v0.2.0`. Recently added additional RefSeq simulation panels with the small Illumina MiSeq read type settings. Next steps are tests of the rather convoluted Python code base and additional Nextflow modules for simulating reads on the backend. Ties in with `mgp-val` repository where the read identity tags (e.g. `taxid`) in the header of the reads simulated are parsed and can be evaluated e.g. to determine levels of host read depletion or microbial loss when testing the depletion module of the main pipeline. This repo currently contains the `MGP-DB` SQLite database and interface for sampling, which should probably be made independent to construct the reference databases and indices for the pre-alpha pipeline (and k-mer profiling tools particularly) - also to annotate the reference sequences for downstream use (e.g. grouping in `Vircov` by `taxid='<taxid>'` reference descriptions.
+* [`mgp-val`](https://github.com/meta-gp/mgp-val) - sensitivity / specificity etc. assessment from wetlab or other reference data (in specific `JSON` format) against outputs from the pipeline, currently a draft that strongly ties in with the Steve Miller et al. (2019) CSF SURPI+ validation paper and the viral clinical and sequencing results (which have been parsed
+
 
 ## Pipeline setup
 
@@ -34,17 +55,17 @@ DBs and host reference genomes for the current development stage have to be down
 Database and reference files for current stage:
 
 ```
-
+TO BE DONE
 ```
 
 
 Test files for the current stage:
 
 ```
-
+TO BE DONE
 ```
 
-Then the pipeline stage (`-entry`) can be executed, for example using the default profile with `conda` environments setup, and a scratch directory for the workload. Note here we are using `minimap2` and short-read indices by default. Inpuit `Fastq` files have typical `R1/R2` tails for PE Illumina data and can be `gz` compressed.
+Then the pipeline stage (`-entry`) can be executed, for example using the default profile with `conda` environments setup, and a scratch directory for the workload. Note here we are using `minimap2` and short-read indices by default. Input `Fastq` files have typical `R1/R2` tails for PE Illumina data and can be `gz` compressed.
 
 ```bash
 nextflow run meta-gp/modules/workflows/pre_alpha.nf \
