@@ -1,0 +1,52 @@
+# pip install pygments mkdocs-material pymdown-extensions
+site_name: Meta-GP
+site_author: Eike Steinig
+site_description: Metagenomic diagnostics for accredited pathogen detection and reporting.
+copyright: "Copyright © 2023-2025 Eike Steinig. All rights reserved."
+
+site_url: https://meta-gp.github.io/
+repo_url: https://github.com/meta-gp/mgp-cerebro
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  favicon: assets/favicon.ico
+  logo: assets/mgp-small-logo.png
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+
+nav:
+  - 'Meta-GP':
+    - 'Introduction': 'index.md'
+    - 'Quick Start': 'quick-start.md'
+    - 'Installation': 'installation.md'
+    - 'Basic Usage': 'usage-basic.md'
+    - 'Tutorial': 'tutorial.md'
+    - 'Workflows': 'workflows.md'
+    - 'Databases': 'databases.md'
+    - 'Datasets': 'datasets.md'
+    - 'Production': 'production.md'
+    - 'Interfaces': 'interfaces.md'
+    - 'Reports': 'reports.md'
+    - 'Accreditation': 'accreditation.md'
+    - 'Acknowledgements': 'acknowledgements.md'
+    - 'Changelog': 'changelog.md'
+  - 'MGP Tools':
+    - 'Tools': 'tools.md'
