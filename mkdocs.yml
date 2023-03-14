@@ -1,11 +1,11 @@
 # pip install pygments mkdocs-material pymdown-extensions
-site_name: Meta-GP
+site_name: META-GP
 site_author: Eike Steinig
 site_description: Metagenomic diagnostics for accredited pathogen detection and reporting.
 copyright: "Copyright © 2023-2025 Eike Steinig. All rights reserved."
 
 site_url: https://meta-gp.github.io/
-repo_url: https://github.com/meta-gp/mgp-cerebro
+repo_url: https://github.com/meta-gp/
 
 theme:
   name: material
@@ -33,20 +33,24 @@ theme:
 
 
 nav:
-  - 'Meta-GP':
-    - 'Introduction': 'index.md'
-    - 'Quick Start': 'quick-start.md'
-    - 'Installation': 'installation.md'
-    - 'Basic Usage': 'usage-basic.md'
-    - 'Tutorial': 'tutorial.md'
-    - 'Workflows': 'workflows.md'
-    - 'Databases': 'databases.md'
-    - 'Datasets': 'datasets.md'
-    - 'Production': 'production.md'
-    - 'Interfaces': 'interfaces.md'
-    - 'Reports': 'reports.md'
-    - 'Accreditation': 'accreditation.md'
-    - 'Acknowledgements': 'acknowledgements.md'
-    - 'Changelog': 'changelog.md'
-  - 'MGP Tools':
-    - 'Tools': 'tools.md'
+  - 'META-GP':
+    - 'Introduction': 'meta-gp/index.md'
+    - 'Quick Start': 'meta-gp/quick-start.md'
+    - 'Installation': 'meta-gp/installation.md'
+    - 'Basic Usage': 'meta-gp/usage-basic.md'
+    - 'Tutorial': 'meta-gp/tutorial.md'
+    - 'Workflows': 'meta-gp/workflows.md'
+    - 'Databases': 'meta-gp/databases.md'
+    - 'Datasets': 'meta-gp/datasets.md'
+    - 'Production': 'meta-gp/production.md'
+    - 'Interfaces': 'meta-gp/interfaces.md'
+    - 'Reports': 'meta-gp/reports.md'
+    - 'Accreditation': 'meta-gp/accreditation.md'
+    - 'Acknowledgements': 'meta-gp/acknowledgements.md'
+    - 'Changelog': 'meta-gp/changelog.md'
+  - 'Syndromes':
+    - 'Introduction': 'syndromes/index.md'
+    - 'Clinical': 'syndromes/clinical.md'
+    - 'Public Health': 'syndromes/public-health.md'
+  - 'Tools':
+    - 'Introduction': 'tools/index.md'
