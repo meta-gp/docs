@@ -1,8 +1,7 @@
-# Overview
 
-Placeholder.
+# Documentation
 
-## Documentation
+## Starting out
 
 [Quick Start](quick-start.md)  
 Concise starting summary for using `META-GP`.

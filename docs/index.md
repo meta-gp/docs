@@ -34,7 +34,7 @@ The `META-GP` project aligns with the National Microbial Genomics Framework 2019
 
 ## Members
 
-
+## Collaborators
 
 ## Steering Comittee
 

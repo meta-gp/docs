@@ -34,7 +34,8 @@ theme:
 
 nav:
   - 'META-GP':
-    - 'Introduction': 'meta-gp/index.md'
+    - 'Overview': 'index.md'
+    - 'Documentation': 'meta-gp/index.md'
     - 'Quick Start': 'meta-gp/quick-start.md'
     - 'Installation': 'meta-gp/installation.md'
     - 'Basic Usage': 'meta-gp/usage-basic.md'

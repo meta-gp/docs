@@ -8,7 +8,7 @@ A tool for computing coverage metrics from alignments including regions of cover
 [`scrubby`](scrubby.md)  
 A tool for thorough background depletion or extraction of reads using k-mer and alignment methods.
 
-[`mgp-cerebro`](mgp-cerebro.md)  
+[`cerebro`](mgp-cerebro.md)  
 A toolkit for the central nervous system workflow (`mgp-cerebro`) including an application programming interface for taxonomic identifications.
 
 
