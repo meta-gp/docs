@@ -22,24 +22,26 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-  favicon: assets/favicon.ico
   logo: assets/mgp-small-logo.png
+  favicon: assets/mgp-small-logo.png
   font:
     text: 'Ubuntu'
     code: 'Ubuntu Mono'
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-
+    
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - 'META-GP':
-    - 'Overview': 'index.md'
+    - 'Introduction': 'index.md'
     - 'Documentation': 'meta-gp/index.md'
     - 'Quick Start': 'meta-gp/quick-start.md'
     - 'Installation': 'meta-gp/installation.md'
     - 'Basic Usage': 'meta-gp/usage-basic.md'
-    - 'Tutorial': 'meta-gp/tutorial.md'
+    - 'Tutorials': 'meta-gp/tutorials.md'
     - 'Workflows': 'meta-gp/workflows.md'
     - 'Databases': 'meta-gp/databases.md'
     - 'Datasets': 'meta-gp/datasets.md'
@@ -47,11 +49,13 @@ nav:
     - 'Interfaces': 'meta-gp/interfaces.md'
     - 'Reports': 'meta-gp/reports.md'
     - 'Accreditation': 'meta-gp/accreditation.md'
+    - 'Quality Assurance': 'meta-gp/qa.md'
+    - 'Publications': 'meta-gp/publications.md'
     - 'Acknowledgements': 'meta-gp/acknowledgements.md'
     - 'Changelog': 'meta-gp/changelog.md'
-  - 'Syndromes':
-    - 'Introduction': 'syndromes/index.md'
-    - 'Clinical': 'syndromes/clinical.md'
-    - 'Public Health': 'syndromes/public-health.md'
+  - 'Themes':
+    - 'Introduction': 'themes/index.md'
+    - 'Clinical': 'themes/clinical.md'
+    - 'Public Health': 'themes/public-health.md'
   - 'Tools':
     - 'Introduction': 'tools/index.md'

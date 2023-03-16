@@ -15,7 +15,7 @@ A basic description of how to use workflows and tools.
 [Tutorial](tutorial.md)  
 A brief tutorial on how to run workflows and generate reports.
 
-## Workflows
+## Resources
 
 [Workflows](workflows.md)  
 A description of `META-GP` workflows and software used.
@@ -35,7 +35,7 @@ A description of `META-GP` wet-lab protocols.
 A description of `META-GP` production setups.
 
 [Interfaces](interfaces.md)  
-A description of `META-GP` exploration and reporting interfaces.
+A description of `META-GP` data and reporting interfaces.
 
 [Reports](reports.md)  
 A description of `META-GP` reporting formats.

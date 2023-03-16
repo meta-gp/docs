@@ -1,19 +1,25 @@
-# Overview
+# Introduction
+
+<img src="assets/mgp-logo.png"  width="300" height="200">
 
 Welcome to the `META-GP` repository! 
 
 We are aiming to provide a comprehensive set of production-grade, accredited protocols for metagenomic diagnostics 
-across clinical and public health applications in Australia. This repository is meant to provide open-source access to protocols, toolkits and workflows currently under 
-development. 
+across clinical and public health applications in Australia. This repository is meant to provide open-source access 
+to protocols, toolkits and workflows currently under development. 
+
+For public resources like databases and datasets please see the [resource section](meta-gp/index.md#resources).
 
 * [Documentation](meta-gp/index.md)  
 Documentation for the `META-GP` platform.
 
-* [Syndromes](syndromes/index.md)  
-Accredited protocols, workflows and reporting for themes in `META-GP`.
+* [Themes](syndromes/index.md)  
+Guidelines and resources for themes in `META-GP`.
 
 * [Tools](tools/index.md)  
 Softwared developed under the `META-GP` umbrella.
+
+
 
 ## About
 
@@ -38,8 +44,6 @@ The `META-GP` project aligns with the National Microbial Genomics Framework 2019
 
 ## Steering Comittee
 
-
-
 ## Contact
 
-* [Dr. Eike Steinig](https://github.com/esteinig) - maintainer and developer at `META-GP`
+* [Dr. Eike Steinig](https://github.com/esteinig) - developer at `META-GP`
