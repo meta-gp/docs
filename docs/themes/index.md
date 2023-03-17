@@ -1,12 +1,12 @@
 # Themes
 
-Protocols and guidelines for the analysis of clinical infections and public health applications according to themes and states covered by `META-GP`.
+Protocols and guidelines for the analysis of clinical infections and public health applications according to themes covered by `META-GP` and states where the protocols are used.
 
 ## Clinical
 
 ### Central nervous system infections  
 
-Protocols for central nervous system infections (including meningitis, encepahlitis, abscesses) focused on low abundance pathogen detection using unbiased or enriched metagenomics and -transciptomics, as well as host-transcriptome analysis for differentiating infectious from non-infectious aetiology.
+Resources for central nervous system infections (including meningitis, encepahlitis, abscesses) focused on low abundance pathogen detection using unbiased or enriched metagenomics and -transciptomics, as well as host-transcriptome analysis for differentiating infectious from non-infectious aetiology.
 
 ---
 
@@ -20,11 +20,11 @@ Protocols for central nervous system infections (including meningitis, encepahli
 
 > Reporting
 
-* Reporting template based on taxonomic aggregation across workflow modules and traceable evidence extraction with [**`cerebro`**]() (VIC)
+* Reporting template based on taxonomic aggregation across workflow modules and traceable extraction of evidence with [**`cerebro`**]() (VIC)
 
 > Quality assurance
 
-* Continuous integration of quality assurance using regularly updated databases and automated sensitivity/specificity testing with [**`ciqa`**]() (VIC)
+* Continuous integration of quality assurance using regularly updated databases and automated sensitivity/specificity testing with [**`cerebro`**]() and [**`ciqa`**]() (VIC)
 
 ---
 
