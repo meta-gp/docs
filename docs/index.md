@@ -1,7 +1,9 @@
 
-<img src="assets/mgp-logo.png"  width="300" height="200">
+<p align="left" style="margin-top: 2rem; margin-bottom: 2rem">
+    <img src="assets/mgp-logo.png"  width="300" height="200">
+</p>
 
-Welcome to the `META-GP` repository! 
+Welcome to the `META-GP` documentation! This repository is currently **under construction**.
 
 
 We are aiming to provide a comprehensive set of production-grade, accredited protocols for metagenomic diagnostics 
