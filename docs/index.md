@@ -1,6 +1,7 @@
 
 <p align="left" style="margin-top: 2rem; margin-bottom: 2rem">
-    <img src="assets/mgp-logo.png"  width="300" height="200">
+    <img src="assets/mgp-logo-blue.png#only-light"  width="300" height="200">
+    <img src="assets/mgp-logo-red.png#only-dark" width="300" height="200">
 </p>
 
 Welcome to the `META-GP` documentation! This repository is currently **under construction**.
