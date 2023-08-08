@@ -4,6 +4,8 @@ Protocols and guidelines for the analysis of clinical infections and public heal
 
 ## Clinical
 
+Clinical themes.
+
 ### Central nervous system infections  
 
 Resources for central nervous system infections (including meningitis, encepahlitis, abscesses) focused on low abundance pathogen detection using unbiased or enriched metagenomics and -transciptomics, as well as host-transcriptome analysis for differentiating infectious from non-infectious aetiology.
@@ -12,7 +14,7 @@ Resources for central nervous system infections (including meningitis, encepahli
 
 > Protocols
 
-* [Wet-lab **protocol**]() for unbiased metagenomics and transcriptomics (`DNA/RNA/NTC`) including unique molecular identifiers and synthetic spike-in controls (VIC)
+* [Wet-lab **protocol**]() for metagenomics and transcriptomics (`DNA/RNA/NTC`) including unique molecular identifiers and synthetic spike-in controls (VIC)
 
 > Workflows
 
@@ -24,17 +26,27 @@ Resources for central nervous system infections (including meningitis, encepahli
 
 > Quality assurance
 
-* Continuous integration of quality assurance using regularly updated databases and automated sensitivity/specificity testing with [**`cerebro`**]() and [**`ciqa`**]() (VIC)
+* Continuous integration of quality assurance using regularly updated databases and automated sensitivity/specificity testing with [**`cipher`**]() and [**`ciqa`**]() (VIC)
 
 ---
 
 ### Respiratory infections
-...
+
+
+Resources for respiratory infections.
+
 
 ### Sexually transmitted infections  
-...
+
+Resources for sexually transmitted infections.
+
 
 ### Bone and joint infections
-...
+
+
+Resources for bone and joint infections
+
 
 ## Public Health
+
+Public health themes.

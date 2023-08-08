@@ -4,14 +4,11 @@
     <img src="assets/mgp-logo-red.png#only-dark" width="300" height="200">
 </p>
 
-Welcome to the `META-GP` documentation! This repository is currently **under construction**.
+Welcome to the `META-GP` documentation! This repository is currently **under construction**. 
 
-
-We are aiming to provide a comprehensive set of production-grade, accredited protocols for metagenomic diagnostics 
-across clinical and public health applications in Australia. This repository is meant to provide open-source access 
-to protocols, software and workflows currently under development. 
-
-For downloads of databases and datasets please see the [resource section](meta-gp/index.md#resources).
+We are aiming to provide a set of production-grade, accredited protocols for metagenomic diagnostics 
+across clinical and public health applications in Australia. This documentation is meant to facilitate
+open-source access to protocols, software and workflows currently under development. 
 
 ---
 
@@ -46,21 +43,4 @@ The `META-GP` project aligns with the National Microbial Genomics Framework 2019
 
 ## Contributors
 
-[Williamson Research Group]() @ The Peter Doherty Institute for Infection and Immunity
-
-* Deborah Williamson
-* Prashanth Ramachandran
-* Marcelina Krysiak
-* Chhay Lim
-* George Taiaroa
-* Janath Fernando
-* Eike Steinig 
-* Kirti Deo
-
-
-
 ## Collaborators
-
-## Contact
-
-* [Dr. Eike Steinig](https://github.com/esteinig) - Williamson Research Group, core developer for `META-GP`
